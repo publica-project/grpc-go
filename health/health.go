@@ -25,10 +25,10 @@ package health
 import (
 	"sync"
 
+	"github.com/publica-project/grpc/codes"
+	healthpb "github.com/publica-project/grpc/health/grpc_health_v1"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	healthpb "google.golang.org/grpc/health/grpc_health_v1"
-	"google.golang.org/grpc/status"
 )
 
 // Server implements `service Health`.

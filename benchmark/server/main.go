@@ -26,8 +26,8 @@ import (
 	_ "net/http/pprof"
 	"time"
 
-	"google.golang.org/grpc/benchmark"
-	"google.golang.org/grpc/grpclog"
+	"github.com/publica-project/grpc/benchmark"
+	"github.com/publica-project/grpc/grpclog"
 )
 
 var duration = flag.Int("duration", math.MaxInt32, "The duration in seconds to run the benchmark server")

@@ -1,6 +1,6 @@
 # gRPC-Go
 
-[![Build Status](https://travis-ci.org/grpc/grpc-go.svg)](https://travis-ci.org/grpc/grpc-go) [![GoDoc](https://godoc.org/google.golang.org/grpc?status.svg)](https://godoc.org/google.golang.org/grpc) [![GoReportCard](https://goreportcard.com/badge/grpc/grpc-go)](https://goreportcard.com/report/github.com/grpc/grpc-go)
+[![Build Status](https://travis-ci.org/grpc/grpc-go.svg)](https://travis-ci.org/grpc/grpc-go) [![GoDoc](https://godoc.org/github.com/publica-project/grpc?status.svg)](https://godoc.org/github.com/publica-project/grpc) [![GoReportCard](https://goreportcard.com/badge/grpc/grpc-go)](https://goreportcard.com/report/github.com/grpc/grpc-go)
 
 The Go implementation of [gRPC](https://grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first. For more information see the [gRPC Quick Start: Go](https://grpc.io/docs/quickstart/go.html) guide.
 
@@ -10,7 +10,7 @@ Installation
 To install this package, you need to install Go and setup your Go workspace on your computer. The simplest way to install the library is to run:
 
 ```
-$ go get -u google.golang.org/grpc
+$ go get -u github.com/publica-project/grpc
 ```
 
 Prerequisites
@@ -21,11 +21,11 @@ release (1.8).
 
 Constraints
 -----------
-The grpc package should only depend on standard Go packages and a small number of exceptions. If your contribution introduces new dependencies which are NOT in the [list](http://godoc.org/google.golang.org/grpc?imports), you need a discussion with gRPC-Go authors and consultants.
+The grpc package should only depend on standard Go packages and a small number of exceptions. If your contribution introduces new dependencies which are NOT in the [list](http://godoc.org/github.com/publica-project/grpc?imports), you need a discussion with gRPC-Go authors and consultants.
 
 Documentation
 -------------
-See [API documentation](https://godoc.org/google.golang.org/grpc) for package and API descriptions and find examples in the [examples directory](examples/).
+See [API documentation](https://godoc.org/github.com/publica-project/grpc) for package and API descriptions and find examples in the [examples directory](examples/).
 
 Performance
 -----------
@@ -42,5 +42,5 @@ FAQ
 
 Please update proto package, gRPC package and rebuild the proto files:
  - `go get -u github.com/golang/protobuf/{proto,protoc-gen-go}`
- - `go get -u google.golang.org/grpc`
+ - `go get -u github.com/publica-project/grpc`
  - `protoc --go_out=plugins=grpc:. *.proto`

@@ -23,12 +23,12 @@ import (
 	"net"
 	"strconv"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/interop"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
-	"google.golang.org/grpc/testdata"
+	"github.com/publica-project/grpc"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/interop"
+	testpb "github.com/publica-project/grpc/interop/grpc_testing"
+	"github.com/publica-project/grpc/testdata"
 )
 
 var (

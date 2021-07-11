@@ -23,8 +23,8 @@ package peer
 import (
 	"net"
 
+	"github.com/publica-project/grpc/credentials"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/credentials"
 )
 
 // Peer contains the information of the peer for an RPC, such as the address

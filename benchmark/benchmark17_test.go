@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/benchmark/stats"
+	"github.com/publica-project/grpc"
+	"github.com/publica-project/grpc/benchmark/stats"
 )
 
 func BenchmarkClient(b *testing.B) {

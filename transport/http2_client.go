@@ -29,16 +29,16 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/keepalive"
+	"github.com/publica-project/grpc/metadata"
+	"github.com/publica-project/grpc/peer"
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
 )
 
 // http2Client implements the ClientTransport interface with HTTP2.

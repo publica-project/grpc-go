@@ -17,7 +17,7 @@ fi
 
 if [ "$1" = "-install" ]; then
   go get -d \
-    google.golang.org/grpc/...
+    github.com/publica-project/grpc/...
   go get -u \
     github.com/golang/lint/golint \
     golang.org/x/tools/cmd/goimports \
@@ -76,9 +76,9 @@ fi
 
 # TODO(menghanl): fix errors in transport_test.
 staticcheck -ignore '
-google.golang.org/grpc/transport/transport_test.go:SA2002
-google.golang.org/grpc/benchmark/benchmain/main.go:SA1019
-google.golang.org/grpc/stats/stats_test.go:SA1019
-google.golang.org/grpc/test/end2end_test.go:SA1019
+github.com/publica-project/grpc/transport/transport_test.go:SA2002
+github.com/publica-project/grpc/benchmark/benchmain/main.go:SA1019
+github.com/publica-project/grpc/stats/stats_test.go:SA1019
+github.com/publica-project/grpc/test/end2end_test.go:SA1019
 ' ./...
 misspell -error .

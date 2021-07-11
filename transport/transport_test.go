@@ -35,12 +35,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/keepalive"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/status"
 )
 
 type server struct {

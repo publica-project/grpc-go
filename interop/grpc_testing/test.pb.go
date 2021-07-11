@@ -26,8 +26,8 @@ import fmt "fmt"
 import math "math"
 
 import (
+	grpc "github.com/publica-project/grpc"
 	context "golang.org/x/net/context"
-	grpc "google.golang.org/grpc"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

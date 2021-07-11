@@ -24,12 +24,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/publica-project/grpc/balancer"
+	"github.com/publica-project/grpc/connectivity"
+	_ "github.com/publica-project/grpc/grpclog/glogger"
+	"github.com/publica-project/grpc/test/leakcheck"
+	"github.com/publica-project/grpc/transport"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/connectivity"
-	_ "google.golang.org/grpc/grpclog/glogger"
-	"google.golang.org/grpc/test/leakcheck"
-	"google.golang.org/grpc/transport"
 )
 
 const goroutineCount = 5

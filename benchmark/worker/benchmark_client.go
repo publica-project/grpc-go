@@ -26,16 +26,16 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/publica-project/grpc"
+	"github.com/publica-project/grpc/benchmark"
+	testpb "github.com/publica-project/grpc/benchmark/grpc_testing"
+	"github.com/publica-project/grpc/benchmark/stats"
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/testdata"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/benchmark"
-	testpb "google.golang.org/grpc/benchmark/grpc_testing"
-	"google.golang.org/grpc/benchmark/stats"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/testdata"
 )
 
 var caFile = flag.String("ca_file", "", "The file containing the CA root cert file")

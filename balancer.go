@@ -23,12 +23,12 @@ import (
 	"net"
 	"sync"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/naming"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/naming"
-	"google.golang.org/grpc/status"
 )
 
 // Address represents a server the client connects to.

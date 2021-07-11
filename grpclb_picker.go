@@ -22,11 +22,11 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/publica-project/grpc/balancer"
+	"github.com/publica-project/grpc/codes"
+	lbpb "github.com/publica-project/grpc/grpclb/grpc_lb_v1/messages"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/codes"
-	lbpb "google.golang.org/grpc/grpclb/grpc_lb_v1/messages"
-	"google.golang.org/grpc/status"
 )
 
 type rpcStats struct {

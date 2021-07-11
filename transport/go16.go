@@ -24,7 +24,7 @@ import (
 	"net"
 	"net/http"
 
-	"google.golang.org/grpc/codes"
+	"github.com/publica-project/grpc/codes"
 
 	"golang.org/x/net/context"
 )

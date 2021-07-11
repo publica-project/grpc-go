@@ -25,7 +25,7 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/test/leakcheck"
+	"github.com/publica-project/grpc/test/leakcheck"
 )
 
 type emptyServiceServer interface{}

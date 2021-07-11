@@ -24,12 +24,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/publica-project/grpc/balancer"
+	"github.com/publica-project/grpc/connectivity"
+	lbpb "github.com/publica-project/grpc/grpclb/grpc_lb_v1/messages"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/resolver"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/connectivity"
-	lbpb "google.golang.org/grpc/grpclb/grpc_lb_v1/messages"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/resolver"
 )
 
 const (

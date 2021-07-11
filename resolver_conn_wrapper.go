@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"strings"
 
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/resolver"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/resolver"
 )
 
 // ccResolverWrapper is a wrapper on top of cc for resolvers.

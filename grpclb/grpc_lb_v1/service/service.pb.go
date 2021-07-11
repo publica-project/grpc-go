@@ -14,11 +14,11 @@ package service
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import grpc_lb_v1 "google.golang.org/grpc/grpclb/grpc_lb_v1/messages"
+import grpc_lb_v1 "github.com/publica-project/grpc/grpclb/grpc_lb_v1/messages"
 
 import (
+	grpc "github.com/publica-project/grpc"
 	context "golang.org/x/net/context"
-	grpc "google.golang.org/grpc"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

@@ -29,16 +29,16 @@ import (
 	"sync"
 	"time"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/encoding"
+	"github.com/publica-project/grpc/encoding/proto"
+	"github.com/publica-project/grpc/metadata"
+	"github.com/publica-project/grpc/peer"
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/transport"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/encoding/proto"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/transport"
 )
 
 // Compressor defines the interface gRPC uses to compress a message.
@@ -572,6 +572,6 @@ const (
 )
 
 // Version is the current grpc version.
-const Version = "1.10.2-dev"
+const Version = "1.10.3"
 
 const grpcUA = "grpc-go/" + Version

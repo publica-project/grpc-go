@@ -29,12 +29,12 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/publica-project/grpc"
+	testpb "github.com/publica-project/grpc/benchmark/grpc_testing"
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/status"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	testpb "google.golang.org/grpc/benchmark/grpc_testing"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/status"
 )
 
 var (

@@ -59,13 +59,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/publica-project/grpc"
+	bm "github.com/publica-project/grpc/benchmark"
+	testpb "github.com/publica-project/grpc/benchmark/grpc_testing"
+	"github.com/publica-project/grpc/benchmark/latency"
+	"github.com/publica-project/grpc/benchmark/stats"
+	"github.com/publica-project/grpc/grpclog"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	bm "google.golang.org/grpc/benchmark"
-	testpb "google.golang.org/grpc/benchmark/grpc_testing"
-	"google.golang.org/grpc/benchmark/latency"
-	"google.golang.org/grpc/benchmark/stats"
-	"google.golang.org/grpc/grpclog"
 )
 
 const (

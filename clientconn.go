@@ -28,21 +28,21 @@ import (
 	"sync"
 	"time"
 
+	"github.com/publica-project/grpc/balancer"
+	_ "github.com/publica-project/grpc/balancer/roundrobin" // To register roundrobin.
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/connectivity"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/keepalive"
+	"github.com/publica-project/grpc/resolver"
+	_ "github.com/publica-project/grpc/resolver/dns"         // To register dns resolver.
+	_ "github.com/publica-project/grpc/resolver/passthrough" // To register passthrough resolver.
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/transport"
 	"golang.org/x/net/context"
 	"golang.org/x/net/trace"
-	"google.golang.org/grpc/balancer"
-	_ "google.golang.org/grpc/balancer/roundrobin" // To register roundrobin.
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/resolver"
-	_ "google.golang.org/grpc/resolver/dns"         // To register dns resolver.
-	_ "google.golang.org/grpc/resolver/passthrough" // To register passthrough resolver.
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/transport"
 )
 
 var (

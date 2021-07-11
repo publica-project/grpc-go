@@ -24,16 +24,16 @@ import (
 )
 
 // Path returns the absolute path the given relative file or directory path,
-// relative to the google.golang.org/grpc/testdata directory in the user's GOPATH.
+// relative to the github.com/publica-project/grpc/testdata directory in the user's GOPATH.
 // If rel is already absolute, it is returned unmodified.
 func Path(rel string) string {
 	if filepath.IsAbs(rel) {
 		return rel
 	}
 
-	v, err := goPackagePath("google.golang.org/grpc/testdata")
+	v, err := goPackagePath("github.com/publica-project/grpc/testdata")
 	if err != nil {
-		log.Fatalf("Error finding google.golang.org/grpc/testdata directory: %v", err)
+		log.Fatalf("Error finding github.com/publica-project/grpc/testdata directory: %v", err)
 	}
 
 	return filepath.Join(v, rel)

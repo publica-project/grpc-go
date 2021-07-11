@@ -23,8 +23,8 @@ import (
 	"net"
 	"testing"
 
+	"github.com/publica-project/grpc/testdata"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/testdata"
 )
 
 func TestTLSOverrideServerName(t *testing.T) {

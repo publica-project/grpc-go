@@ -24,12 +24,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/resolver"
+	"github.com/publica-project/grpc/resolver/manual"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/test/leakcheck"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/test/leakcheck"
 )
 
 func errorDesc(err error) string {

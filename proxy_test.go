@@ -29,8 +29,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/publica-project/grpc/test/leakcheck"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/test/leakcheck"
 )
 
 const (

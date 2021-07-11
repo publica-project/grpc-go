@@ -24,15 +24,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/publica-project/grpc/balancer"
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/encoding"
+	"github.com/publica-project/grpc/metadata"
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/transport"
 	"golang.org/x/net/context"
 	"golang.org/x/net/trace"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/transport"
 )
 
 // StreamHandler defines the handler called by gRPC server to complete the

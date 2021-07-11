@@ -34,21 +34,21 @@ import (
 
 	"io/ioutil"
 
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/encoding"
+	"github.com/publica-project/grpc/encoding/proto"
+	"github.com/publica-project/grpc/grpclog"
+	"github.com/publica-project/grpc/internal"
+	"github.com/publica-project/grpc/keepalive"
+	"github.com/publica-project/grpc/metadata"
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/tap"
+	"github.com/publica-project/grpc/transport"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/trace"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/encoding/proto"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/tap"
-	"google.golang.org/grpc/transport"
 )
 
 const (
@@ -992,10 +992,10 @@ func (s *Server) processStreamingRPC(t transport.ServerTransport, stream *transp
 		}()
 	}
 	ss := &serverStream{
-		t:     t,
-		s:     stream,
-		p:     &parser{r: stream},
-		codec: s.getCodec(stream.ContentSubtype()),
+		t:                     t,
+		s:                     stream,
+		p:                     &parser{r: stream},
+		codec:                 s.getCodec(stream.ContentSubtype()),
 		maxReceiveMessageSize: s.opts.maxReceiveMessageSize,
 		maxSendMessageSize:    s.opts.maxSendMessageSize,
 		trInfo:                trInfo,

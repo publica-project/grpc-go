@@ -32,17 +32,17 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/publica-project/grpc/codes"
+	"github.com/publica-project/grpc/credentials"
+	"github.com/publica-project/grpc/keepalive"
+	"github.com/publica-project/grpc/metadata"
+	"github.com/publica-project/grpc/peer"
+	"github.com/publica-project/grpc/stats"
+	"github.com/publica-project/grpc/status"
+	"github.com/publica-project/grpc/tap"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/tap"
 )
 
 // ErrIllegalHeaderWrite indicates that setting header is illegal because of

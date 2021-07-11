@@ -11,7 +11,7 @@ matrix:
   - go: 1.9.x
     env: RUN386=1
 
-go_import_path: google.golang.org/grpc
+go_import_path: github.com/publica-project/grpc
 
 before_install:
   - if [[ "$TRAVIS_GO_VERSION" = 1.9* && "$GOARCH" != "386" ]]; then ./vet.sh -install || exit 1; fi

@@ -22,8 +22,8 @@
 package connectivity
 
 import (
+	"github.com/publica-project/grpc/grpclog"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/grpclog"
 )
 
 // State indicates the state of connectivity.
